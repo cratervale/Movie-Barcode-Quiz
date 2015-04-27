@@ -8,7 +8,7 @@
  * Controller of the movieBarcodeQuizApp
  */
 angular.module('movieBarcodeQuizApp')
-  .controller('QuizCtrl', function ($scope, $rootScope, gameServer, randomnessFunctions) {
+  .controller('QuizCtrl', function ($scope, $rootScope, gameServer, randomnessFunctions, gameSession) {
 
 
 
@@ -16,10 +16,14 @@ angular.module('movieBarcodeQuizApp')
 
     $scope.checkIfCorrect = function(guess){
       if (guess.id === $rootScope.correct.id){
+        gameSession.reportScore(true);
         alert("Correct!");
       } else {
         alert("Nope, it was " + $scope.correct.attributes.title);
+        gameSession.reportScore(false);
       }
+
+      $scope.startRound();
     };
 
     $scope.startRound = function(){

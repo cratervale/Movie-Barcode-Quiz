@@ -1,6 +1,7 @@
 <div  height="1000px">
 
 <!--<img width = "100%" src="{{correct.attributes.image}}">-->
-<button ng-repeat = "movie in movies" class="btn btn-primary" ng-click="checkIfCorrect(movie)">{{movie.attributes.title}} ({{movie.attributes.year}})</button>
+  <h3 class="badge text-danger">What movie is this?</h3>
+<button ng-repeat = "movie in movies" class="btn " ng-click="checkIfCorrect(movie)">{{movie.attributes.title}} ({{movie.attributes.year}})</button>
 
 </div>

@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+.btn{
+  margin: 4px;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -42,10 +46,12 @@ html{
   }
 }
 
+
+
 /* Custom page footer */
 .footer {
-  position:relative;
-  margin-bottom: 0px;
+  position:absolute;
+  bottom: 0;
   color: #777;
 }
 
